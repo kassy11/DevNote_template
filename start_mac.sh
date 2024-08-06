@@ -25,17 +25,10 @@ fi
 
 if [ ! -d "$target"/"$month" ]; then
   mkdir "$target"/"$month"
-  cp "template/month.md" "$target"/"$month"/"$month".md
-  sed -i '' "1s/^/# $month\n/" "$target"/"$month"/"$month".md
 fi
 
 if [ ! -d "$target"/"$month"/"$week" ]; then
   mkdir "$target"/"$month"/"$week"
-fi
-
-if [ ! -e  "$target"/"$month"/"$week"/"$week".md ]; then
-  cp "template/week.md" "$target"/"$month"/"$week"/"$week".md
-  sed -i '' "1s/^/# $week\n/" "$target"/"$month"/"$week"/"$week".md
 fi
 
 if [ ! -e  "$target"/"$month"/"$week"/"$today".md ]; then
